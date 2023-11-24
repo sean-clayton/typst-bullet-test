@@ -15,6 +15,11 @@ jobs:
 
       - run: mkdir dist
 
+      - run: typst --version
+      - run: ls -ltah
+      - run: ls -ltah fonts
+      - run: typst --font-path fonts fonts
+
       - name: Build PDF
         run: typst compile --font-path fonts test.typ dist/ci.pdf
 
