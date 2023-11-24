@@ -18,7 +18,7 @@ jobs:
       - run: typst --version
       - run: ls -ltah
       - run: ls -ltah fonts
-      - run: typst --font-path fonts fonts
+      - run: typst fonts --font-path fonts
 
       - name: Build PDF
         run: typst compile --font-path fonts test.typ dist/ci.pdf
